@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink AI | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>LifeLink <span>AI</span></h2>
+                <p>Admin Control Panel</p>
+            </div>
+
+            <nav>
+                <a href="#overview" class="active">Dashboard</a>
+                <a href="#blood-banks">Blood Banks</a>
+                <a href="#hospitals">Hospitals</a>
+                <a href="#donors">Donors</a>
+                <a href="#inventory">Blood Inventory</a>
+                <a href="#requests">Blood Requests</a>
+            </nav>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Blood Resource Network Management</p>
+                </div>
+
+                <div class="admin-profile">
+                    <span>Administrator</span>
+                    <div class="profile-icon">A</div>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section id="overview">
+                <h2>System Overview</h2>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h3>Registered Blood Banks</h3>
+                        <p id="totalBanks">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Verified Blood Banks</h3>
+                        <p id="verifiedBanks">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Pending Verification</h3>
+                        <p id="pendingBanks">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Registered Donors</h3>
+                        <p id="totalDonors">—</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Blood Bank Management -->
+            <section id="blood-banks" class="content-card">
+                <h2>Blood Bank Management</h2>
+                <p>Review and manage registered blood banks.</p>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Bank Name</th>
+                                <th>City</th>
+                                <th>Email</th>
+                                <th>License Number</th>
+                                <th>Verification</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="bloodBankTable">
+                            <tr>
+                                <td colspan="7">Loading blood banks...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Other Management Sections -->
+            <section id="hospitals" class="content-card">
+    <h2>Hospital Management</h2>
+    <p>Review and manage registered hospitals.</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Hospital Name</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Account Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="hospitalTable">
+                <tr>
+                    <td colspan="7">Loading hospitals...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+           <section id="donors" class="content-card">
+    <h2>Donor Management</h2>
+    <p>View and manage registered donors.</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Donor Name</th>
+                    <th>Email</th>
+                    <th>Blood Group</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th>Account Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="donorTable">
+                <tr><td colspan="8">Loading donors...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+            <section id="requests" class="content-card">
+    <h2>Blood Request Monitoring</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Hospital</th>
+                    <th>Blood Group</th>
+                    <th>Component</th>
+                    <th>Units</th>
+                    <th>Urgency</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody id="bloodRequestTable">
+                <tr>
+                    <td colspan="9">Loading blood requests...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

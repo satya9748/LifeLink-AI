@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLink AI | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">+</span>
+      <span>LifeLink <b>AI</b><small>Blood Resource Network</small></span>
+    </a>
+
+    <div class="top-actions">
+      <span id="userName">Loading...</span>
+      <button class="btn btn-outline" id="logoutButton">Logout</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">LIFELINK AI</div>
+        <h2 id="dashboardTitle">Dashboard</h2>
+        <p id="dashboardSubtitle">Welcome to your dashboard.</p>
+      </div>
+    </div>
+
+    <div id="dashboardContent">
+      <div class="empty-state">Loading your dashboard...</div>
+    </div>
+
+    <p id="dashboardMessage" class="form-message" aria-live="polite"></p>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>
